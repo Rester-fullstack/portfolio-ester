@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://byester.com.br/sitemap.xml
