@@ -1,0 +1,177 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 48px;
+
+  z-index: 80;
+
+  pointer-events: none;
+
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header-logo,
+.menu-button {
+  pointer-events: auto;
+}
+
+/* LOGO */
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 4px;
+
+  color: var(--white);
+
+  text-decoration: none;
+}
+
+
+/* ESTER */
+
+.header-logo-name {
+  font-size: 25px;
+  font-weight: 500;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+
+  transition:
+    letter-spacing 0.35s ease;
+}
+
+
+/* SOFTWARE DEVELOPER */
+
+.header-logo-role {
+  font-size: 5px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.65;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+/* HOVER */
+
+.header-logo:hover
+.header-logo-name {
+  letter-spacing: -0.025em;
+}
+
+.header-logo:hover
+.header-logo-role {
+  opacity: 1;
+}
+
+.header-logo:hover {
+  letter-spacing: -0.025em;
+}
+
+/* HEADER APÓS SCROLL */
+
+.header.scrolled {
+  background: rgba(245, 246, 243, 0.78);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  box-shadow:
+    0 1px 0 rgba(47, 58, 85, 0.08);
+}
+
+/* Quando estiver sobre o fundo claro */
+
+.header.scrolled .header-logo,
+.header.scrolled .menu-button {
+  color: var(--blueberry);
+}
+
+/* MENU BUTTON */
+
+.menu-button {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--white);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease;
+}
+
+.menu-button-line {
+  display: block;
+
+  width: 28px;
+  height: 1px;
+
+  background: currentColor;
+
+  transition:
+    width 0.35s ease;
+}
+
+.menu-button:hover .menu-button-line {
+  width: 40px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 22px 20px;
+  }
+
+  .header.scrolled {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .header-logo {
+    font-size: 12px;
+  }
+
+  .menu-button {
+    font-size: 10px;
+  }
+}

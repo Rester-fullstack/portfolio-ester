@@ -1,0 +1,75 @@
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.transition-layer {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9998;
+
+  pointer-events: none;
+}
+
+.transition-layer-back {
+  background: var(--berry);
+}
+
+.transition-layer-main {
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--blueberry);
+}
+
+.transition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.transition-small {
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(245, 246, 243, 0.55);
+}
+
+.transition-title {
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+
+  font-size: clamp(64px, 10vw, 155px);
+  font-weight: 500;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.06em;
+
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .transition-title {
+    font-size: clamp(44px, 14vw, 72px);
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    white-space: nowrap;
+  }
+
+  .transition-title-long {
+    font-size: clamp(28px, 8vw, 42px);
+    letter-spacing: -0.055em;
+  }
+}
